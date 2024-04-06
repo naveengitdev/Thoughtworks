@@ -1,0 +1,12 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - apache2
+  - php
+  - libapache2-mod-php
+  - mariadb-server
+  - php-mysql
+  - php-gd
+runcmd:
+  - apt-get update
+  - DEBIAN_FRONTEND=noninteractive apt-get install -y mediawiki
